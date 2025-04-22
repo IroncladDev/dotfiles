@@ -29,12 +29,6 @@ return {
 			opts.desc = "LSP implementation"
 			keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 
-			opts.desc = "LSP signature help"
-			keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, opts)
-
-			opts.desc = "LSP definition type"
-			keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
-
 			opts.desc = "Rename"
 			keymap.set("n", "<leader>ra", vim.lsp.buf.rename, opts)
 

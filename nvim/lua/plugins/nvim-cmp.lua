@@ -14,10 +14,6 @@ return {
 				completeopt = "menu,menuone,noselect",
 			},
 			mapping = cmp.mapping.preset.insert({
-				["<C-k>"] = cmp.mapping.select_prev_item(),
-				["<C-j>"] = cmp.mapping.select_next_item(),
-				["<tab>"] = cmp.mapping.select_next_item(),
-				["<S-tab>"] = cmp.mapping.select_prev_item(),
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.close(),
 				["<CR>"] = cmp.mapping.confirm({
