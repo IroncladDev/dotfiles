@@ -36,9 +36,6 @@ return {
 						information = { "underline" },
 						ok = { "underline" },
 					},
-					inlay_hints = {
-						background = true,
-					},
 					which_key = false,
 				},
 			},

@@ -34,7 +34,6 @@ win < ctrl - k : yabai -m window --swap north; skhd -k "escape"
 win < ctrl - h : yabai -m window --swap west; skhd -k "escape"
 win < ctrl - l : yabai -m window --swap east; skhd -k "escape"
 
-
 # move window and split
 win < shift - j : yabai -m window --warp south; skhd -k "escape"
 win < shift - k : yabai -m window --warp north; skhd -k "escape"
