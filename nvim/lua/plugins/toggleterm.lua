@@ -15,9 +15,6 @@ return {
 				},
 			},
       shade_terminals = false,
-      float_opts = {
-        border = "curved",
-      }
 		})
 	end,
 }

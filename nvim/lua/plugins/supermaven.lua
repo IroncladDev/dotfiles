@@ -2,15 +2,17 @@ return {
 	"supermaven-inc/supermaven-nvim",
   lazy = false,
 	config = function()
+		local theme = require("catppuccin.palettes").get_palette("mocha")
+
 		require("supermaven-nvim").setup({
 			keymaps = {
-        accept_suggestion = "<C-q>",
+        accept_suggestion = "<C-t>",
 				accept_word = "<C-w>",
-        clear_suggestion = "<C-e>"
+        clear_suggestion = "<C-a>"
 			},
 			disable_inline_completion = false,
       color = {
-        suggestion_color = "#756293",
+        suggestion_color = theme.overlay0,
         cterm = 244
       }
 		})

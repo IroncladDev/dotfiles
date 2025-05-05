@@ -15,12 +15,12 @@ vim.keymap.set("n", "<leader>tc", "<cmd> Telescope commands <CR>", { desc = "Sho
 -- Lspconfig
 vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Floating Diagnostics" })
 
--- Buffers
-vim.keymap.set("n", "<S-b>", "<cmd> Telescope buffers <CR>", { desc = "Show buffers" })
-vim.keymap.set("n", "<tab>", "<cmd> :bn <CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<S-tab>", "<cmd> :bp <CR>", { desc = "Prev Buffer" })
-vim.keymap.set("n", "<leader>ox", '%bdelete|edit #|normal `"', { desc = "Close Other Buffers" })
-vim.keymap.set("n", "<leader>x", "<cmd> bdelete <CR>", { desc = "Close Buffer" })
+-- Bufferline
+vim.keymap.set("n", "<tab>", "<cmd> BufferLineCycleNext <CR>", { desc = "Next Tab" })
+vim.keymap.set("n", "<S-tab>", "<cmd> BufferLineCyclePrev <CR>", { desc = "Previous Tab" })
+vim.keymap.set("n", "<leader>ox", "<cmd> BufferLineCloseOthers <CR>", { desc = "Close Others" })
+vim.keymap.set("n", "<leader>x", "<cmd> bp|bd # <CR>", { desc = "Close Buffer" })
+vim.keymap.set("n", "<leader>X", "<cmd> bd! <CR>", { desc = "Force Close Buffer" })
 
 -- Navigating in Insert Mode
 vim.keymap.set("i", "<C-s>", "<ESC>^i", { desc = "Start of line" })

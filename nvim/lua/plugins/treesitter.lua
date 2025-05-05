@@ -6,6 +6,7 @@ return {
 
     configs.setup({
       ensure_installed = { "lua", "vim", "vimdoc", "javascript", "typescript", "tsx", "html", "css", "rust", "astro" },
+      auto_install = true,
       sync_install = false,
       highlight = {
         enable = true,
