@@ -3,7 +3,6 @@ return {
   name = "catppuccin",
   priority = 1000,
   config = function()
-    local blend = require("catppuccin.utils.colors").blend
     require("catppuccin").setup({
       flavour = "mocha",
       term_colors = true,
@@ -13,6 +12,11 @@ return {
           NormalFloat = { bg = colors.surface0, fg = colors.text },
           FloatBorder = { bg = colors.surface0, fg = colors.text },
           GitSignsAddPreview = { bg = colors.surface0 },
+          BlinkCmpMenu = { bg = colors.crust },
+          BlinkCmpMenuSelection = { bg = colors.surface0 },
+          BlinkCmpDoc = { bg = colors.mantle },
+          BlinkCmpDocSeparator = { bg = colors.mantle },
+          BlinkCmpDocBorder = { bg = colors.mantle },
         }
       end,
       integrations = {
