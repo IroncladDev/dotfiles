@@ -9,6 +9,9 @@ vim.opt.backspace = "indent,eol,start"
 -- Sync clipboard
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 
+-- Inline diagnostics
+vim.diagnostic.config({ virtual_text = true })
+
 -- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
