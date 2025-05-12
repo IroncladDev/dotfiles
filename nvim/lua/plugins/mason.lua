@@ -1,14 +1,11 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
   },
   ensure_installed = {
-    "prettier",
-    "eslint-lsp",
     "stylua",
-    "astro-language-server",
-    "biome",
+    "prettier"
   },
   config = function()
     local mason = require("mason")
@@ -18,14 +15,15 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
+        "astro",
+        "biome",
         "lua_ls",
         "ts_ls",
-        "tailwindcss",
         "rust_analyzer",
         "html",
         "cssls",
         "astro",
-        "biome"
+        "biome",
       },
       automatic_installation = true,
     })

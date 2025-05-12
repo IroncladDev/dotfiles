@@ -7,7 +7,7 @@ vim.opt.autoindent = true
 vim.opt.backspace = "indent,eol,start"
 
 -- Sync clipboard
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.opt.clipboard = "unnamedplus"
 
 -- Inline diagnostics
 vim.diagnostic.config({ virtual_text = true })

@@ -37,11 +37,6 @@ return {
             return not root_has_file("biome.json")
           end,
         }),
-        null_ls.builtins.formatting.stylua.with({
-          condition = function()
-            return root_has_file("init.lua")
-          end,
-        }),
       },
     })
   end,

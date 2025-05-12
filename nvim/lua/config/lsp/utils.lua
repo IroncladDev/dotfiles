@@ -3,6 +3,7 @@ local capabilities = require('blink.cmp').get_lsp_capabilities()
 local keymap = vim.keymap
 local buf = vim.lsp.buf
 
+---@diagnostic disable-next-line: unused-local
 local on_attach = function(client, bufnr)
   opts.buffer = bufnr
 
@@ -17,7 +18,15 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<leader>ca", buf.code_action, opts)
 
   opts.desc = "LSP formatting"
-  keymap.set("n", "<leader>fm", buf.format, opts)
+  vim.keymap.set("n", "<leader>fm", function()
+    local clients = vim.lsp.get_clients({ bufnr = 0 })
+
+    if vim.tbl_contains(vim.tbl_map(function(c) return c.name end, clients), "null-ls") then
+      vim.lsp.buf.format({ name = "null-ls" })
+    else
+      vim.lsp.buf.format()
+    end
+  end, { silent = true })
 
   -- Go to
   opts.desc = "Go to definition"
@@ -43,9 +52,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<leader>df", vim.diagnostic.open_float, opts)
 end
 
-return { 
-  on_attach = on_attach, 
+return {
+  on_attach = on_attach,
   capabilities = capabilities
 }
-
-

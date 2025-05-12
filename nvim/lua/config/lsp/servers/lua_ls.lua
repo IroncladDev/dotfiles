@@ -6,7 +6,7 @@ vim.lsp.config['lua_ls'] = {
   root_markers = {
     '.luarc.json', '.luarc.jsonc', '.luacheckrc',
     '.stylua.toml', 'stylua.toml', 'selene.toml',
-    'selene.yml'
+    'selene.yml', 'lazy-lock.json', 'init.lua',
   },
   settings = {
     Lua = {
