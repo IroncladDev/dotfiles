@@ -1,3 +1,3 @@
 return {
-	"vidocqh/auto-indent.nvim",
+  "vidocqh/auto-indent.nvim",
 }

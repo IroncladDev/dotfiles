@@ -1,16 +1,16 @@
 return {
-	"windwp/nvim-ts-autotag",
-	ft = {
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
+  "windwp/nvim-ts-autotag",
+  ft = {
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
     "astro",
-		"html",
-		"xml",
-	},
+    "html",
+    "xml",
+  },
   event = "VeryLazy",
-	config = function()
-		require("nvim-ts-autotag").setup()
-	end,
+  config = function()
+    require("nvim-ts-autotag").setup()
+  end,
 }
