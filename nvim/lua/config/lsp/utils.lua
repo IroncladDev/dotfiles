@@ -38,9 +38,6 @@ local on_attach = function(client, bufnr)
   opts.desc = "Open LSP references"
   keymap.set("n", "cr", buf.references, opts)
 
-  opts.desc = "Go to LSP references"
-  keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-
   -- Diagnostics
   opts.desc = "Prev diagnostic"
   keymap.set("n", "dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)

@@ -9,6 +9,16 @@ vim.opt.backspace = "indent,eol,start"
 -- Sync clipboard
 vim.opt.clipboard = "unnamedplus"
 
+-- Prevent vimgrep from looking through unwanted directories
+vim.opt.wildignore:append({
+  "*/node_modules/*",
+  "*/dist/*",
+  "*/target/*",
+  "*/.git/*",
+  "*/.next/*",
+  "*/build/*"
+})
+
 -- Inline diagnostics
 vim.diagnostic.config({ virtual_text = true })
 

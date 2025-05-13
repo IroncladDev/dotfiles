@@ -22,6 +22,13 @@ return {
     },
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
+      providers = {
+        cmdline = {
+          enabled = function()
+            return not vim.fn.getcmdline():match("vimgrep")
+          end
+        }
+      }
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },
     cmdline = {
