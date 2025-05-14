@@ -15,12 +15,14 @@ yabai -m space 2 --label w
 yabai -m space 3 --label e
 yabai -m space 4 --label r
 yabai -m space 5 --label t
+yabai -m space 6 --label y
 
 yabai -m space 1 --display 1
 yabai -m space 2 --display 1
 yabai -m space 3 --display 1
 yabai -m space 4 --display 2
 yabai -m space 5 --display 2
+yabai -m space 6 --display 2
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off

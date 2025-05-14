@@ -72,3 +72,9 @@ win < d: yabai -m display --focus next || yabai -m display --focus first; skhd -
 
 # balance out tree of windows (resize to occupy same area)
 win < b : yabai -m space --balance; skhd -k "escape"
+
+# Resize windows
+win < 0x1B : yabai -m window --resize left:64:0 || yabai -m window --resize right:-64:0
+win < 0x18 : yabai -m window --resize left:-64:0 || yabai -m window --resize right:64:0
+win < 0x21 : yabai -m window --resize top:0:64 || yabai -m window --resize bottom:0:-64
+win < 0x1E : yabai -m window --resize top:0:-64 || yabai -m window --resize bottom:0:64
