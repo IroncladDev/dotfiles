@@ -12,6 +12,9 @@ ctrl - g ; win
 # exiting layers
 win < escape; default
 
+# raycast
+win < r : open -a "Raycast"; skhd -k "escape"
+
 # -- stopping/starting/restarting Yabai / SKHD --
 win < y : yabai --restart-service; skhd -k "escape"
 win < s : skhd --restart-service; skhd -k "escape"

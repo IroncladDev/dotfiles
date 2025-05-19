@@ -67,9 +67,6 @@ keymap.set({ "n", "v" }, "<C-l>", "$", { desc = "End of line" })
 -- Dioxus formatting
 keymap.set("n", "<leader>fx", "<cmd> silent! !dx fmt <CR>", { desc = "Dioxus formatting" })
 
--- Redo
-keymap.set("n", "<C-u>", "<C-r>", { desc = "Redo", noremap = true, silent = true })
-
 -- Visual Navigation
 keymap.set("v", "<", "<gv", { desc = "Indent line" })
 keymap.set("v", ">", ">gv", { desc = "Indent line" })
