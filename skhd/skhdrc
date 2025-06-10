@@ -13,7 +13,7 @@ ctrl - g ; win
 win < escape; default
 
 # raycast
-win < r : open -a "Raycast"; skhd -k "escape"
+win < g : open -a "Raycast"; skhd -k "escape"
 
 # -- stopping/starting/restarting Yabai / SKHD --
 win < y : yabai --restart-service; skhd -k "escape"

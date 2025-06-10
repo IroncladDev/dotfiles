@@ -15,3 +15,9 @@ vim.lsp.config['ts_ls'] = {
 }
 
 vim.lsp.enable('ts_ls')
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    vim.lsp.inlay_hint.enable(true)
+  end,
+})
