@@ -1,0 +1,46 @@
+;; process unmapped keys
+(defcfg
+  process-unmapped-keys yes
+)
+
+;; variables
+(defvar
+  tap-time 175
+  hold-time 150
+)
+
+;; Keys to remap
+(defsrc
+  a
+  z  x  c  v
+)
+
+;; Aliases
+(defalias
+  a (tap-dance $tap-time (
+    (macro a)
+    (macro M-a)
+  ))
+  z (tap-dance $tap-time (
+    (macro z)
+    (macro M-z)
+  ))
+  x (tap-dance $tap-time (
+    (macro x)
+    (macro M-x)
+  ))
+  c (tap-dance $tap-time (
+    (macro c)
+    (macro M-c)
+  ))
+  v (tap-dance $tap-time (
+    (macro v)
+    (macro M-v)
+  ))
+)
+
+;; Layers
+(deflayer base
+  @a
+  @z  @x  @c  @v
+)

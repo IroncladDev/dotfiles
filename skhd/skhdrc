@@ -81,3 +81,44 @@ win < 0x1B : yabai -m window --resize left:64:0 || yabai -m window --resize righ
 win < 0x18 : yabai -m window --resize left:-64:0 || yabai -m window --resize right:64:0
 win < 0x21 : yabai -m window --resize top:0:64 || yabai -m window --resize bottom:0:-64
 win < 0x1E : yabai -m window --resize top:0:-64 || yabai -m window --resize bottom:0:64
+
+# symbols
+ralt - q : skhd -t "!"
+ralt - w : skhd -t "@"
+ralt - e : skhd -t "#"
+ralt - r : skhd -t "$"
+ralt - t : skhd -t "%"
+ralt - y : skhd -t "^"
+ralt - u : skhd -t "&"
+ralt - i : skhd -t "*"
+ralt - o : skhd -t "-"
+ralt - p : skhd -t "_"
+
+ralt + shift - q : skhd -t "1"
+ralt + shift - w : skhd -t "2"
+ralt + shift - e : skhd -t "3"
+ralt + shift - r : skhd -t "4"
+ralt + shift - t : skhd -t "5"
+ralt + shift - y : skhd -t "6"
+ralt + shift - u : skhd -t "7"
+ralt + shift - i : skhd -t "8"
+ralt + shift - o : skhd -t "9"
+ralt + shift - p : skhd -t "0"
+
+# # arrows
+# ralt - h : skhd -k "left"
+# ralt - j : skhd -k "down"
+# ralt - k : skhd -k "up"
+# ralt - l : skhd -k "right"
+#
+# # parens
+# ralt - a : skhd -t "["
+# ralt - s : skhd -t "]"
+# ralt - d : skhd -t "("
+# ralt - f : skhd -t ")"
+# ralt - c : skhd -t "{"
+# ralt - v : skhd -t "}"
+#
+# # slash
+# ralt - 0x2C : skhd -t "\\"
+# ralt + shift - 0x2C : skhd -t "|"

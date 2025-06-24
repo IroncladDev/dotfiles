@@ -1,3 +1,9 @@
+vim.filetype.add({
+  extension = {
+    kbd = "kanata",
+  }
+})
+
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
@@ -5,7 +11,7 @@ return {
     local configs = require("nvim-treesitter.configs")
 
     configs.setup({
-      ensure_installed = { "lua", "vim", "vimdoc", "javascript", "typescript", "tsx", "html", "css", "rust", "astro" },
+      ensure_installed = { "lua", "vim", "vimdoc", "javascript", "typescript", "tsx", "html", "css", "rust", "astro", "kanata" },
       auto_install = true,
       sync_install = false,
       highlight = {
@@ -15,5 +21,15 @@ return {
       },
       indent = { enable = true },
     })
+
+    local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+    parser_config.kanata = {
+      install_info = {
+        url = "https://github.com/postsolar/tree-sitter-kanata",
+        files = { "src/parser.c" },
+        branch = "master",
+      },
+      filetype = "kanata",
+    }
   end,
 }
