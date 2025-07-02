@@ -1,0 +1,46 @@
+;; Combos
+;; Note that the key combos map to the QWERTY keys in defsrc, not the actual keys themselves
+(defchordsv2
+  (j n) lrld $combo-time all-released ()
+  (a s) esc $combo-time all-released ()
+  (z x) tab $combo-time all-released ()
+  (o p) - $combo-time all-released ()
+  (l ;) ' $combo-time all-released ()
+  (. /) = $combo-time all-released ()
+  ;; numbers
+  (spc q) 1 $combo-time all-released ()
+  (spc w) 2 $combo-time all-released ()
+  (spc e) 3 $combo-time all-released ()
+  (spc r) 4 $combo-time all-released ()
+  (spc t) 5 $combo-time all-released ()
+  (spc y) 6 $combo-time all-released ()
+  (spc u) 7 $combo-time all-released ()
+  (spc i) 8 $combo-time all-released ()
+  (spc o) 9 $combo-time all-released ()
+  (spc p) 0 $combo-time all-released ()
+  ;; symbols
+  (spc a) S-1 $combo-time all-released ()
+  (spc s) S-2 $combo-time all-released ()
+  (spc d) S-3 $combo-time all-released ()
+  (spc f) S-4 $combo-time all-released ()
+  (spc g) S-5 $combo-time all-released ()
+  (spc h) S-6 $combo-time all-released ()
+  (spc j) S-7 $combo-time all-released ()
+  (spc k) S-8 $combo-time all-released ()
+  (spc l) S-9 $combo-time all-released ()
+  (spc ;) S-0 $combo-time all-released ()
+  ;; d/v-combo
+  (v a) M-a $combo-time all-released ()
+  (v z) M-z $combo-time all-released ()
+  (v x) M-x $combo-time all-released ()
+  (v c) M-c $combo-time all-released ()
+  (v b) M-v $combo-time all-released ()
+  ;; braces
+  (spc m) S-[ $combo-time all-released ()
+  (spc ,) S-] $combo-time all-released ()
+  (spc .) [ $combo-time all-released ()
+  (spc /) ] $combo-time all-released ()
+  ;; grave/pipe
+  (, /) grv $combo-time all-released ()
+  (, .) \ $combo-time all-released ()
+)

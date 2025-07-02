@@ -104,21 +104,3 @@ ralt + shift - u : skhd -t "7"
 ralt + shift - i : skhd -t "8"
 ralt + shift - o : skhd -t "9"
 ralt + shift - p : skhd -t "0"
-
-# # arrows
-# ralt - h : skhd -k "left"
-# ralt - j : skhd -k "down"
-# ralt - k : skhd -k "up"
-# ralt - l : skhd -k "right"
-#
-# # parens
-# ralt - a : skhd -t "["
-# ralt - s : skhd -t "]"
-# ralt - d : skhd -t "("
-# ralt - f : skhd -t ")"
-# ralt - c : skhd -t "{"
-# ralt - v : skhd -t "}"
-#
-# # slash
-# ralt - 0x2C : skhd -t "\\"
-# ralt + shift - 0x2C : skhd -t "|"
