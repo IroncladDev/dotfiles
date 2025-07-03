@@ -1,0 +1,11 @@
+(defalias
+  controls-switch (layer-switch controls)
+  controls-hold (layer-while-held controls)
+)
+
+(defalias
+  bctl (tap-hold $tap-time $hold-time bspc lctl)
+  qcmd (tap-hold $tap-time $hold-time q lmet)
+  scmd (tap-hold $tap-time $hold-time ; lmet)
+  rlsw (tap-hold $tap-time $hold-time @controls-switch @controls-hold)
+)

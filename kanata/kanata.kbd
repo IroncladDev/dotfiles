@@ -1,14 +1,44 @@
-(include config.kbd)
-(include chordsv2.kbd)
+(defcfg 
+  process-unmapped-keys yes
+  danger-enable-cmd yes
+  concurrent-tap-hold yes
+)
 
-(defalias
-  sctl (tap-hold $hold-time $hold-time spc lctl)
+(defvar
+  tap-time 175
+  hold-time 125
+  combo-time 40
+)
+
+(include combos.kbd)
+(include tap-hold.kbd)
+(include tap-dance.kbd)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  esc  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
 )
 
 (deflayer colmak
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    q    w    f    p    b    j    l    u    y    ;    _    _    _
-  _    a    r    s    t    g    m    n    e    i    o    _    _
-  _    z    x    c    d    v    k    h    ,    .    /    _
-  _    _    _              @sctl          _    _    _
+  _     _     _    _    _    _    _    _    _     _    _     _    _    @bctl
+  _     @qcmd w    f    p    b    j    l    u     y    @scmd _    _    _
+  _     @cma  r    s    t    g    m    n    e     i    o     _    ret
+  _     @cmz  @cmx @cmc d    @cmv k    h    ,     .    /     _
+  _     _     _              spc            @rlsw _    _
+)
+
+(defalias 
+  pl S-[
+  pr S-]
+)
+
+(deflayer controls
+  _     _     _    _    _      _    _    _    _     _      _     _    _    @bctl
+  _     1     2    3    4      5    6    7    8     9      0     _    _    _
+  _     prev  pp   next voldwn volu _    left down  up     right _    ret
+  _     _     _    _    _      _    _    _    @pl   @pr    _     _
+  _     _     _              spc              @rlsw _      _
 )

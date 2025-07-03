@@ -3,7 +3,7 @@
 
 # Application shortcuts
 
-ctrl - 0x29 : open -a "kitty"
+ctrl - 0x2B : open -a "kitty"
 ctrl - 0x2F : open -a "Brave Browser Nightly"
 
 # activating layers
@@ -32,32 +32,32 @@ win < k : yabai -m window --focus north; skhd -k "escape"
 win < l : yabai -m window --focus east; skhd -k "escape"
 
 # swap windows
-win < ctrl - j : yabai -m window --swap south; skhd -k "escape"
-win < ctrl - k : yabai -m window --swap north; skhd -k "escape"
-win < ctrl - h : yabai -m window --swap west; skhd -k "escape"
-win < ctrl - l : yabai -m window --swap east; skhd -k "escape"
+win < ctrl - n : yabai -m window --swap south; skhd -k "escape"
+win < ctrl - e : yabai -m window --swap north; skhd -k "escape"
+win < ctrl - s : yabai -m window --swap west; skhd -k "escape"
+win < ctrl - t : yabai -m window --swap east; skhd -k "escape"
 
 # move window and split
-win < shift - j : yabai -m window --warp south; skhd -k "escape"
-win < shift - k : yabai -m window --warp north; skhd -k "escape"
-win < shift - h : yabai -m window --warp west; skhd -k "escape"
-win < shift - l : yabai -m window --warp east; skhd -k "escape"
+win < shift - n : yabai -m window --warp south; skhd -k "escape"
+win < shift - e : yabai -m window --warp north; skhd -k "escape"
+win < shift - s : yabai -m window --warp west; skhd -k "escape"
+win < shift - t : yabai -m window --warp east; skhd -k "escape"
 
 # move window to space
 win < ctrl - q : yabai -m window --space q; skhd -k "escape"
 win < ctrl - w : yabai -m window --space w; skhd -k "escape"
-win < ctrl - e : yabai -m window --space e; skhd -k "escape"
-win < ctrl - r : yabai -m window --space r; skhd -k "escape"
-win < ctrl - t : yabai -m window --space t; skhd -k "escape"
+win < ctrl - f : yabai -m window --space e; skhd -k "escape"
+win < ctrl - p : yabai -m window --space r; skhd -k "escape"
+win < ctrl - b : yabai -m window --space t; skhd -k "escape"
 win < ctrl - n : yabai -m window --space next || yabai -m window --space first; skhd -k "escape"
 win < ctrl - p : yabai -m window --space prev || yabai -m window --space last; skhd -k "escape"
 
 # focus space
 win < q : yabai -m space --focus q; skhd -k "escape"
 win < w : yabai -m space --focus w; skhd -k "escape"
-win < e : yabai -m space --focus e; skhd -k "escape"
-win < r : yabai -m space --focus r; skhd -k "escape"
-win < t : yabai -m space --focus t; skhd -k "escape"
+win < f : yabai -m space --focus e; skhd -k "escape"
+win < p : yabai -m space --focus r; skhd -k "escape"
+win < b : yabai -m space --focus t; skhd -k "escape"
 win < n : yabai -m space --focus next || yabai -m space --focus first; skhd -k "escape"
 win < p : yabai -m space --focus prev || yabai -m space --focus last; skhd -k "escape"
 
@@ -81,26 +81,3 @@ win < 0x1B : yabai -m window --resize left:64:0 || yabai -m window --resize righ
 win < 0x18 : yabai -m window --resize left:-64:0 || yabai -m window --resize right:64:0
 win < 0x21 : yabai -m window --resize top:0:64 || yabai -m window --resize bottom:0:-64
 win < 0x1E : yabai -m window --resize top:0:-64 || yabai -m window --resize bottom:0:64
-
-# symbols
-ralt - q : skhd -t "!"
-ralt - w : skhd -t "@"
-ralt - e : skhd -t "#"
-ralt - r : skhd -t "$"
-ralt - t : skhd -t "%"
-ralt - y : skhd -t "^"
-ralt - u : skhd -t "&"
-ralt - i : skhd -t "*"
-ralt - o : skhd -t "-"
-ralt - p : skhd -t "_"
-
-ralt + shift - q : skhd -t "1"
-ralt + shift - w : skhd -t "2"
-ralt + shift - e : skhd -t "3"
-ralt + shift - r : skhd -t "4"
-ralt + shift - t : skhd -t "5"
-ralt + shift - y : skhd -t "6"
-ralt + shift - u : skhd -t "7"
-ralt + shift - i : skhd -t "8"
-ralt + shift - o : skhd -t "9"
-ralt + shift - p : skhd -t "0"

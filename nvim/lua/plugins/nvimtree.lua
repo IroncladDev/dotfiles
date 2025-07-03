@@ -5,6 +5,11 @@ return {
     local WIDTH_RATIO = 0.5
 
     require("nvim-tree").setup({
+      on_attach = function(bufnr)
+        local api = require("nvim-tree.api")
+        api.config.mappings.default_on_attach(bufnr)
+        vim.keymap.set("n", "e", "k", { noremap = true, nowait = true, silent = true, buffer = bufnr })
+      end,
       filters = {
         dotfiles = false,
         exclude = { vim.fn.stdpath("config") .. "/lua/custom" },

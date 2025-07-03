@@ -1,7 +1,5 @@
 local keymap = vim.keymap
 
-local left = "s"
-local right = "t"
 local down = "n"
 local up = "e"
 
@@ -22,21 +20,16 @@ keymap.set(
 -- Move to the next/previous line if at the first/last column
 keymap.set(
   { "n", "v" },
-  left,
+  "h",
   'v:count == 0 && col(".") == 1 ? "k$" : "h"',
   { desc = "Move left", expr = true, noremap = true }
 )
 keymap.set(
   { "n", "v" },
-  right,
+  "l",
   'v:count == 0 && col(".") == col("$") - 1 ? "j0" : "l"',
   { desc = "Move right", expr = true, noremap = true }
 )
-
-keymap.set({ "n", "v" }, "k", "n", { noremap = true })
-keymap.set({ "n", "v" }, "h", "e", { noremap = true })
-keymap.set({ "n", "v" }, "j", "s", { noremap = true })
-keymap.set({ "n", "v" }, "l", "t", { noremap = true })
 
 -- Leader
 vim.g.mapleader = " "
@@ -62,10 +55,10 @@ keymap.set("n", "<leader>X", "<cmd> bd! <CR>", { desc = "Force Close Buffer" })
 -- Navigating in Insert Mode
 keymap.set("i", "<C-k>", "<ESC>^i", { desc = "Start of line" })
 keymap.set("i", "<C-h>", "<End>", { desc = "End of line" })
-keymap.set("i", "<C-" .. left .. ">", "<Left>", { desc = "Move left" })
-keymap.set("i", "<C-" .. right .. ">", "<Right>", { desc = "Move right" })
-keymap.set("i", "<C-" .. down .. ">", "<Down>", { desc = "Move down" })
-keymap.set("i", "<C-" .. up .. ">", "<Up>", { desc = "Move up" })
+keymap.set("i", "<C-n>", "<Left>", { desc = "Move left" })
+keymap.set("i", "<C-e>", "<Right>", { desc = "Move right" })
+keymap.set("i", "<C-i>", "<Down>", { desc = "Move down" })
+keymap.set("i", "<C-o>", "<Up>", { desc = "Move up" })
 
 -- Navigate in Normal Mode
 keymap.set("n", "<Esc>", "<cmd> noh <CR>", { desc = "Clear highlights" })
@@ -92,16 +85,16 @@ keymap.set(
 keymap.set("t", "<C-x>", [[<C-\><C-n>]], { noremap = true })
 
 -- Splits
-keymap.set("n", "<leader>s" .. left, ":vnew<CR> <C-w>h", { desc = "New split left" })
-keymap.set("n", "<leader>s" .. down, ":split<CR> <C-w>j", { desc = "New split down" })
-keymap.set("n", "<leader>s" .. up, ":new<CR> <C-w>k", { desc = "New split up" })
-keymap.set("n", "<leader>s" .. right, ":vsplit<CR> <C-w>l", { desc = "New split right" })
+keymap.set("n", "<leader>sl", ":vnew<CR> <C-w>h", { desc = "New split left" })
+keymap.set("n", "<leader>sd", ":split<CR> <C-w>j", { desc = "New split down" })
+keymap.set("n", "<leader>su", ":new<CR> <C-w>k", { desc = "New split up" })
+keymap.set("n", "<leader>sr", ":vsplit<CR> <C-w>l", { desc = "New split right" })
 
 -- Window navigation
-keymap.set("n", "<leader>" .. left, "<C-w>h", { desc = "Move left" })
-keymap.set("n", "<leader>" .. right, "<C-w>l", { desc = "Move right" })
-keymap.set("n", "<leader>" .. down, "<C-w>j", { desc = "Move down" })
-keymap.set("n", "<leader>" .. up, "<C-w>k", { desc = "Move up" })
+keymap.set("n", "<leader>wl", "<C-w>h", { desc = "Move left" })
+keymap.set("n", "<leader>wr", "<C-w>l", { desc = "Move right" })
+keymap.set("n", "<leader>wd", "<C-w>j", { desc = "Move down" })
+keymap.set("n", "<leader>wu", "<C-w>k", { desc = "Move up" })
 
 -- Parrot
 keymap.set({ "n", "v" }, "<leader>ai", ":PrtChatToggle<CR>", { desc = "Parrot Toggle AI Chat" })
@@ -115,6 +108,3 @@ keymap.set({ "v" }, "<leader>rw", ":PrtRewrite<CR>", { desc = "Rewrite" })
 
 -- ToggleTerm
 keymap.set({ "n", "v", "i", "t" }, "<C-f>", "<cmd> ToggleTerm<CR>", { desc = "Toggle Terminal" })
-
--- Folding
-keymap.set("n", "<leader>zb", "$zf%", { desc = "Fold block" })
