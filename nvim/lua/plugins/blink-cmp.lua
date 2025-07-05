@@ -13,7 +13,6 @@ return {
     keymap = {
       preset = 'enter',
       ['<C-y>'] = { 'cancel' },
-      ['<C-e>'] = { 'select_prev' },
     },
     appearance = {
       nerd_font_variant = 'mono'

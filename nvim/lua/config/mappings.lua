@@ -1,35 +1,45 @@
 local keymap = vim.keymap
 
-local down = "n"
-local up = "e"
+local left = "n"
+local down = "e"
+local up = "i"
+local right = "o"
 
 -- Move up and down through wrapped lines in normal/terminal/visual mode
 keymap.set(
   { "n", "v" },
   down,
   'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',
-  { desc = "Move down", expr = true, noremap = true }
+  { expr = true, noremap = true }
 )
 keymap.set(
   { "n", "v" },
   up,
   'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',
-  { desc = "Move up", expr = true, noremap = true }
+  { expr = true, noremap = true }
 )
 
 -- Move to the next/previous line if at the first/last column
 keymap.set(
   { "n", "v" },
-  "h",
+  left,
   'v:count == 0 && col(".") == 1 ? "k$" : "h"',
-  { desc = "Move left", expr = true, noremap = true }
+  { expr = true, noremap = true }
 )
 keymap.set(
   { "n", "v" },
-  "l",
+  right,
   'v:count == 0 && col(".") == col("$") - 1 ? "j0" : "l"',
-  { desc = "Move right", expr = true, noremap = true }
+  { expr = true, noremap = true }
 )
+
+keymap.set({ 'n', 'v' }, 'k', left, { noremap = true })
+keymap.set({ 'n', 'v' }, "j", down, { noremap = true })
+keymap.set({ 'n', 'v' }, 'h', up, { noremap = true })
+keymap.set({ 'n', 'v' }, 'l', right, { noremap = true })
+
+keymap.set({ 'n', 'v' }, "K", "N", { noremap = true })
+keymap.set({ 'n', 'v' }, 'L', 'O', { noremap = true })
 
 -- Leader
 vim.g.mapleader = " "
@@ -53,12 +63,10 @@ keymap.set("n", "<leader>x", "<cmd> bp|bd # <CR>", { desc = "Close Buffer" })
 keymap.set("n", "<leader>X", "<cmd> bd! <CR>", { desc = "Force Close Buffer" })
 
 -- Navigating in Insert Mode
-keymap.set("i", "<C-k>", "<ESC>^i", { desc = "Start of line" })
-keymap.set("i", "<C-h>", "<End>", { desc = "End of line" })
-keymap.set("i", "<C-n>", "<Left>", { desc = "Move left" })
-keymap.set("i", "<C-e>", "<Right>", { desc = "Move right" })
-keymap.set("i", "<C-i>", "<Down>", { desc = "Move down" })
-keymap.set("i", "<C-o>", "<Up>", { desc = "Move up" })
+keymap.set("i", "<C-".. left .. ">", "<Left>", { desc = "Move left" })
+keymap.set("i", "<C-".. down .. ">", "<Down>", { desc = "Move down" })
+keymap.set("i", "<C-".. up .. ">", "<Up>", { desc = "Move up" })
+keymap.set("i", "<C-".. right .. ">", "<Right>", { desc = "Move right" })
 
 -- Navigate in Normal Mode
 keymap.set("n", "<Esc>", "<cmd> noh <CR>", { desc = "Clear highlights" })
@@ -85,16 +93,16 @@ keymap.set(
 keymap.set("t", "<C-x>", [[<C-\><C-n>]], { noremap = true })
 
 -- Splits
-keymap.set("n", "<leader>sl", ":vnew<CR> <C-w>h", { desc = "New split left" })
-keymap.set("n", "<leader>sd", ":split<CR> <C-w>j", { desc = "New split down" })
-keymap.set("n", "<leader>su", ":new<CR> <C-w>k", { desc = "New split up" })
-keymap.set("n", "<leader>sr", ":vsplit<CR> <C-w>l", { desc = "New split right" })
+keymap.set("n", "<leader>s" .. left, ":vnew<CR> <C-w>h", { desc = "New split left" })
+keymap.set("n", "<leader>s" .. down, ":split<CR> <C-w>j", { desc = "New split down" })
+keymap.set("n", "<leader>s" .. up, ":new<CR> <C-w>k", { desc = "New split up" })
+keymap.set("n", "<leader>s" .. right, ":vsplit<CR> <C-w>l", { desc = "New split right" })
 
 -- Window navigation
-keymap.set("n", "<leader>wl", "<C-w>h", { desc = "Move left" })
-keymap.set("n", "<leader>wr", "<C-w>l", { desc = "Move right" })
-keymap.set("n", "<leader>wd", "<C-w>j", { desc = "Move down" })
-keymap.set("n", "<leader>wu", "<C-w>k", { desc = "Move up" })
+keymap.set("n", "<leader>w" .. left, "<C-w>h", { desc = "Move left" })
+keymap.set("n", "<leader>w" .. down, "<C-w>j", { desc = "Move down" })
+keymap.set("n", "<leader>w" .. up, "<C-w>k", { desc = "Move up" })
+keymap.set("n", "<leader>w" .. right, "<C-w>l", { desc = "Move right" })
 
 -- Parrot
 keymap.set({ "n", "v" }, "<leader>ai", ":PrtChatToggle<CR>", { desc = "Parrot Toggle AI Chat" })
@@ -107,4 +115,4 @@ keymap.set({ "n", "v" }, "<leader>am", ":PrtModel<CR>", { desc = "Parrot Select 
 keymap.set({ "v" }, "<leader>rw", ":PrtRewrite<CR>", { desc = "Rewrite" })
 
 -- ToggleTerm
-keymap.set({ "n", "v", "i", "t" }, "<C-f>", "<cmd> ToggleTerm<CR>", { desc = "Toggle Terminal" })
+keymap.set({ "n", "v", "t" }, "<C-f>", "<cmd> ToggleTerm<CR>", { desc = "Toggle Terminal" })
