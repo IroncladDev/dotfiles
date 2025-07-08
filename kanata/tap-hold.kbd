@@ -4,8 +4,8 @@
 )
 
 (defalias
-  bctl (tap-hold $tap-time $hold-time bspc lctl)
-  qcmd (tap-hold $tap-time $hold-time q lmet)
-  scmd (tap-hold $tap-time $hold-time ; lmet)
-  rlsw (tap-hold $tap-time $hold-time @controls-switch @controls-hold)
+  spl (tap-hold 0 $hold-time spc lsft)
+  bsc (tap-hold $tap-time $hold-time bspc lmet)
+  rly (tap-hold $tap-time $hold-time ret @controls-hold)
+  cdr (tap-hold 0 $hold-time sldr lctl)
 )

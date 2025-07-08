@@ -13,32 +13,29 @@
 (include combos.kbd)
 (include tap-hold.kbd)
 (include tap-dance.kbd)
+(include sequences.kbd)
 
 (defsrc
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  esc  a    s    d    f    g    h    j    k    l    ;    '    ret
+  esc  a    s    d    f    g    h    j    k    l    ;    '    ent
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
 (deflayer colmak
-  _     _     _    _    _    _    _    _    _     _    _     _    _    @bctl
-  _     @qcmd w    f    p    b    j    l    u     y    @scmd _    _    _
-  _     @cma  r    s    t    g    m    n    e     i    o     _    ret
-  _     @cmz  @cmx @cmc d    @cmv k    h    ,     .    /     _
-  _     _     _              spc            @rlsw _    _
-)
+  _    _    _    _    _    _    _    _    _    _    _    _    _    @bsc
+  _    q    w    f    p    b    j    l    u    y    ;    _    _    _
+  _    a    r    s    t    g    m    n    e    i    o    _    @rly
+  @cdr z    x    c    d    v    k    h    ,    .    /    _
 
-(defalias 
-  pl S-[
-  pr S-]
+  _    _    _              @spl           _    _    _
 )
 
 (deflayer controls
-  _     _     _    _    _      _    _    _    _     _      _     _    _    @bctl
-  _     1     2    3    4      5    6    7    8     9      0     _    _    _
-  _     prev  pp   next voldwn volu _    left down  up     right _    ret
-  _     _     _    _    _      _    _    _    @pl   @pr    _     _
-  _     _     _              spc              @rlsw _      _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    1    2    3    4    5    6    7    8    9    0    _    _    _
+  _    prev pp   next vold volu _    left down up   rght _    _
+  _    _    _    _    _    _    _    [    S-[  S-]  ]    _
+  _    _    _              _              _    _    _
 )

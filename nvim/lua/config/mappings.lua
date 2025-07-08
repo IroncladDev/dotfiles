@@ -33,13 +33,13 @@ keymap.set(
   { expr = true, noremap = true }
 )
 
-keymap.set({ 'n', 'v' }, 'k', left, { noremap = true })
-keymap.set({ 'n', 'v' }, "j", down, { noremap = true })
-keymap.set({ 'n', 'v' }, 'h', up, { noremap = true })
-keymap.set({ 'n', 'v' }, 'l', right, { noremap = true })
+keymap.set({ 'n', 'v' }, 'k', 'n', { noremap = true })
+keymap.set({ 'n', 'v' }, "j", 'e', { noremap = true })
+keymap.set({ 'n', 'v' }, 'h', 'o', { noremap = true })
+keymap.set({ 'n', 'v' }, 'l', 'i', { noremap = true })
 
 keymap.set({ 'n', 'v' }, "K", "N", { noremap = true })
-keymap.set({ 'n', 'v' }, 'L', 'O', { noremap = true })
+keymap.set({ 'n', 'v' }, 'H', 'O', { noremap = true })
 
 -- Leader
 vim.g.mapleader = " "
@@ -63,10 +63,10 @@ keymap.set("n", "<leader>x", "<cmd> bp|bd # <CR>", { desc = "Close Buffer" })
 keymap.set("n", "<leader>X", "<cmd> bd! <CR>", { desc = "Force Close Buffer" })
 
 -- Navigating in Insert Mode
-keymap.set("i", "<C-".. left .. ">", "<Left>", { desc = "Move left" })
-keymap.set("i", "<C-".. down .. ">", "<Down>", { desc = "Move down" })
-keymap.set("i", "<C-".. up .. ">", "<Up>", { desc = "Move up" })
-keymap.set("i", "<C-".. right .. ">", "<Right>", { desc = "Move right" })
+keymap.set("i", "<C-" .. left .. ">", "<Left>", { desc = "Move left", noremap = true })
+keymap.set("i", "<C-" .. down .. ">", "<Down>", { desc = "Move down", noremap = true })
+keymap.set("i", "<C-" .. up .. ">", "<Up>", { desc = "Move up", noremap = true })
+keymap.set("i", "<C-" .. right .. ">", "<Right>", { desc = "Move right", noremap = true })
 
 -- Navigate in Normal Mode
 keymap.set("n", "<Esc>", "<cmd> noh <CR>", { desc = "Clear highlights" })

@@ -1,0 +1,37 @@
+(defseq
+  ;; editing
+  s-home (n)
+  s-end (o)
+  s-word (w)
+  s-back-word (b)
+
+  ;; focusing apps
+  app-brave (a b)
+  app-kitty (a k)
+  app-raycast (a r)
+  app-signal (a s)
+
+  ;; media controls
+  media-prev (m m)
+  media-play-pause (m n)
+  media-next (m e)
+  media-vol-down (m i)
+  media-vol-up (m o)
+)
+(defvirtualkeys
+  s-home (macro home)
+  s-end (macro end)
+  s-word (macro A-right)
+  s-back-word (macro A-left)
+
+  app-brave (cmd open -a "Brave Browser Nightly")
+  app-kitty (cmd open -a "kitty")
+  app-raycast (cmd open -a "Raycast")
+  app-signal (cmd open -a "Signal")
+  
+  media-prev prev
+  media-play-pause pp
+  media-next next
+  media-vol-down vold
+  media-vol-up volu
+)
