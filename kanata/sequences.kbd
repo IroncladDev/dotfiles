@@ -7,16 +7,10 @@
 
   ;; focusing apps
   app-brave (a b)
-  app-kitty (a k)
+  app-kitty (a t)
   app-raycast (a r)
-  app-signal (a s)
-
-  ;; media controls
-  media-prev (m m)
-  media-play-pause (m n)
-  media-next (m e)
-  media-vol-down (m i)
-  media-vol-up (m o)
+  app-slack (a s)
+  app-signal (a C-s)
 )
 (defvirtualkeys
   s-home (macro home)
@@ -27,11 +21,6 @@
   app-brave (cmd open -a "Brave Browser Nightly")
   app-kitty (cmd open -a "kitty")
   app-raycast (cmd open -a "Raycast")
+  app-slack (cmd open -a "Slack")
   app-signal (cmd open -a "Signal")
-  
-  media-prev prev
-  media-play-pause pp
-  media-next next
-  media-vol-down vold
-  media-vol-up volu
 )
