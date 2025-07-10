@@ -5,7 +5,7 @@
 
 (defalias
   spl (tap-hold 0 $hold-time spc lsft)
-  bsc (tap-hold $tap-time $hold-time bspc lmet)
-  rly (tap-hold $tap-time $hold-time ret @controls-hold)
+  bsc (tap-hold $tap-time $hold-time bspc @controls-hold)
+  rly (tap-hold $tap-time $hold-time ret lmet)
   cdr (tap-hold 0 $hold-time sldr lctl)
 )

@@ -32,4 +32,11 @@
   (t g) S-M-5 $combo-time all-released ()
   ;; space + enter
   (spc ent) S-ret $combo-time all-released ()
+  ;; d-cmd combos
+  (v a) M-a $combo-time all-released ()
+  (v z) M-z $combo-time all-released ()
+  (v x) M-x $combo-time all-released ()
+  (v c) M-c $combo-time all-released ()
+  (v b) M-v $combo-time all-released ()
+  (v ent) M-ent $combo-time all-released ()
 )
