@@ -6,8 +6,8 @@
 
 (defvar
   tap-time 175
-  hold-time 125
-  combo-time 40
+  hold-time 150
+  combo-time 30
 )
 
 (include combos.kbd)
@@ -35,7 +35,7 @@
 (deflayer controls
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    1    2    3    4    5    6    7    8    9    0    _    _    _
-  _    prev pp   next vold volu _    left down up   rght _    _
-  _    _    _    _    _    _    _    [    S-[  S-]  ]    _
+  _    prev pp   next vold volu _    left down up   rght _    S-ent
+  _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _              _              _    _    _
 )

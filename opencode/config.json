@@ -1,0 +1,5 @@
+{
+  "model": "anthropic/claude-3-7-sonnet-20250219",
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "opencode"
+}
