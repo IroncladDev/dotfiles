@@ -5,6 +5,8 @@ local down = "e"
 local up = "i"
 local right = "o"
 
+vim.keymap.set('i', '<M-BS>', '<C-w>', { noremap = true })
+
 -- Move up and down through wrapped lines in normal/terminal/visual mode
 keymap.set(
   { "n", "v" },

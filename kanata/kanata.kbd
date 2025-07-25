@@ -14,6 +14,7 @@
 (include tap-hold.kbd)
 (include tap-dance.kbd)
 (include sequences.kbd)
+(include overrides.kbd)
 
 (defsrc
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -30,12 +31,4 @@
   @cdr z    x    c    d    v    k    h    ,    .    /    _
 
   _    _    _              @spl           _    _    _
-)
-
-(deflayer controls
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    1    2    3    4    5    6    7    8    9    0    _    _    _
-  _    prev pp   next vold volu _    left down up   rght _    S-ent
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _
 )

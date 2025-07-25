@@ -17,22 +17,15 @@ return {
           condition = function()
             return root_has_file("biome.json")
           end,
-          filetypes = {
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-            "astro",
-            "html",
-            "css",
-          },
         }),
         null_ls.builtins.formatting.prettier.with({
+          extra_filetypes = { "astro" },
           condition = function()
             return not root_has_file("biome.json")
           end,
         }),
         require("none-ls.diagnostics.eslint").with({
+          extra_filetypes = { "astro" },
           condition = function()
             return not root_has_file("biome.json")
           end,

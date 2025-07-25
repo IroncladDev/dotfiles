@@ -22,8 +22,6 @@ return {
         "rust_analyzer",
         "html",
         "cssls",
-        "astro",
-        "biome",
       },
       automatic_installation = true,
     })

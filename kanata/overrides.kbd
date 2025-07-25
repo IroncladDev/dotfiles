@@ -1,0 +1,17 @@
+(defoverrides
+  (lmet n) (left)
+  (lmet e) (down)
+  (lmet i) (up)
+  (lmet o) (right)
+
+  (lmet q) (prev)
+  (lmet w) (pp)
+  (lmet f) (next)
+  (lmet p) (vold)
+  (lmet b) (volu)
+
+  (bspc) (lalt bspc)
+  (lsft bspc) (bspc)
+
+  (lctl ent) (lsft ent)
+)

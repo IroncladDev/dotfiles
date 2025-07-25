@@ -20,8 +20,7 @@
   (spc h) S-6 $combo-time all-released ()
   (spc j) S-7 $combo-time all-released ()
   (spc k) S-8 $combo-time all-released ()
-  (spc l) S-9 $combo-time all-released ()
-  (spc ;) S-0 $combo-time all-released ()
+  (spc p) S-; $combo-time all-released ()
   ;; braces
   (d f) S-[ $combo-time all-released ()
   (j k) S-] $combo-time all-released ()
@@ -37,11 +36,4 @@
   ;; screenshot/screen capture
   (r f) S-C-M-4 $combo-time all-released ()
   (t g) S-M-5 $combo-time all-released ()
-  ;; d-cmd combos
-  (v a) M-a $combo-time all-released ()
-  (v z) M-z $combo-time all-released ()
-  (v x) M-x $combo-time all-released ()
-  (lsft c) M-c $combo-time all-released ()
-  (v b) M-v $combo-time all-released ()
-  (v ent) M-ent $combo-time all-released ()
 )

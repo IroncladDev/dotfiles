@@ -12,7 +12,7 @@ vim.lsp.config['astro'] = {
     typescript = {
       tsdk = vim.fn.resolve(
         vim.fn.stdpath("data")
-          .. "/mason/packages/typescript-language-server/node_modules/typescript/lib"
+        .. "/mason/packages/typescript-language-server/node_modules/typescript/lib"
       ),
     },
   },
