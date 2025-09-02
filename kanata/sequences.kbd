@@ -4,7 +4,6 @@
   s-end (o)
   s-word (w)
   s-back-word (b)
-  s-enter (ent)
 
   ;; focusing apps
   app-brave (a b)
@@ -12,17 +11,18 @@
   app-raycast (a r)
   app-slack (a s)
   app-signal (a C-s)
+  app-mail (a m)
 )
 (defvirtualkeys
   s-home (macro home)
   s-end (macro end)
   s-word (macro A-right)
   s-back-word (macro A-left)
-  s-enter (macro S-enter)
 
   app-brave (cmd open -a "Brave Browser Nightly")
   app-kitty (cmd open -a "kitty")
   app-raycast (cmd open -a "Raycast")
   app-slack (cmd open -a "Slack")
   app-signal (cmd open -a "Signal")
+  app-mail (cmd open -a "Mail")
 )

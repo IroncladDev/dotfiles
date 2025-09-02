@@ -16,7 +16,6 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "astro",
-        "biome",
         "lua_ls",
         "ts_ls",
         "rust_analyzer",

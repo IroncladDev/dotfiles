@@ -8,9 +8,6 @@ ctrl - g ; win
 # exiting layers
 win < escape; default
 
-# raycast
-win < g : open -a "Raycast"; skhd -k "escape"
-
 # -- stopping/starting/restarting Yabai / SKHD --
 win < y : yabai --restart-service; skhd -k "escape"
 win < s : skhd --restart-service; skhd -k "escape"
@@ -28,15 +25,15 @@ win < i : yabai -m window --focus north; skhd -k "escape"
 win < o : yabai -m window --focus east; skhd -k "escape"
 
 # swap windows
-win < ctrl - n : yabai -m window --swap south; skhd -k "escape"
-win < ctrl - e : yabai -m window --swap north; skhd -k "escape"
-win < ctrl - i : yabai -m window --swap west; skhd -k "escape"
+win < ctrl - n : yabai -m window --swap west; skhd -k "escape"
+win < ctrl - e : yabai -m window --swap south; skhd -k "escape"
+win < ctrl - i : yabai -m window --swap north; skhd -k "escape"
 win < ctrl - o : yabai -m window --swap east; skhd -k "escape"
 
 # move window and split
-win < shift - n : yabai -m window --warp south; skhd -k "escape"
-win < shift - e : yabai -m window --warp north; skhd -k "escape"
-win < shift - i : yabai -m window --warp west; skhd -k "escape"
+win < shift - n : yabai -m window --warp west; skhd -k "escape"
+win < shift - e : yabai -m window --warp south; skhd -k "escape"
+win < shift - i : yabai -m window --warp north; skhd -k "escape"
 win < shift - o : yabai -m window --warp east; skhd -k "escape"
 
 # move window to space
@@ -59,14 +56,11 @@ win < s : yabai -m space --focus s; skhd -k "escape"
 win < n : yabai -m space --focus next || yabai -m space --focus first; skhd -k "escape"
 win < p : yabai -m space --focus prev || yabai -m space --focus last; skhd -k "escape"
 
-# move space to display
-win < ctrl - d : yabai -m space --display next || yabai -m space --display first; skhd -k "escape"
-
 # toggle window maximized
 win < m : yabai -m window --toggle zoom-fullscreen; skhd -k "escape"
 
 # toggle window float
-win < f : yabai -m window --toggle float --grid 4:4:1:1:2:2; skhd -k "escape"
+win < shift - f : yabai -m window --toggle float --grid 4:4:1:1:2:2; skhd -k "escape"
 
 # toggle display focus
 win < d: yabai -m display --focus next || yabai -m display --focus first; skhd -k "escape"

@@ -5,34 +5,34 @@ local down = "e"
 local up = "i"
 local right = "o"
 
-vim.keymap.set('i', '<M-BS>', '<C-w>', { noremap = true })
+vim.keymap.set({ 'i', 't', 'c' }, '<M-BS>', '<C-w>', { noremap = true })
 
 -- Move up and down through wrapped lines in normal/terminal/visual mode
 keymap.set(
-  { "n", "v" },
-  down,
-  'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',
-  { expr = true, noremap = true }
+    { "n", "v" },
+    down,
+    'v:count || mode(1)[0:1] == "no" ? "j" : "gj"',
+    { expr = true, noremap = true }
 )
 keymap.set(
-  { "n", "v" },
-  up,
-  'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',
-  { expr = true, noremap = true }
+    { "n", "v" },
+    up,
+    'v:count || mode(1)[0:1] == "no" ? "k" : "gk"',
+    { expr = true, noremap = true }
 )
 
 -- Move to the next/previous line if at the first/last column
 keymap.set(
-  { "n", "v" },
-  left,
-  'v:count == 0 && col(".") == 1 ? "k$" : "h"',
-  { expr = true, noremap = true }
+    { "n", "v" },
+    left,
+    'v:count == 0 && col(".") == 1 ? "k$" : "h"',
+    { expr = true, noremap = true }
 )
 keymap.set(
-  { "n", "v" },
-  right,
-  'v:count == 0 && col(".") == col("$") - 1 ? "j0" : "l"',
-  { expr = true, noremap = true }
+    { "n", "v" },
+    right,
+    'v:count == 0 && col(".") == col("$") - 1 ? "j0" : "l"',
+    { expr = true, noremap = true }
 )
 
 keymap.set({ 'n', 'v' }, 'k', 'n', { noremap = true })
@@ -82,13 +82,13 @@ keymap.set("x", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { desc = "Don't copy repla
 
 -- Toggle comment in both modes
 keymap.set("n", "<leader>/", function()
-  require("Comment.api").toggle.linewise.current()
+    require("Comment.api").toggle.linewise.current()
 end, { desc = "Toggle comment" })
 keymap.set(
-  "v",
-  "<leader>/",
-  "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-  { desc = "Toggle comment" }
+    "v",
+    "<leader>/",
+    "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+    { desc = "Toggle comment" }
 )
 
 -- Terminal Mode
