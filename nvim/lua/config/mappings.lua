@@ -50,12 +50,20 @@ vim.g.mapleader = " "
 keymap.set("n", "<leader>b", "<cmd> NvimTreeToggle <CR>")
 
 -- Telescope
-keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>", { desc = "Find files" })
+-- keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>", { desc = "Find files" })
+-- kemap.set("n", "<leader>fg", "<cmd> Telescope git_status <CR>", { desc = "Git status" })
 keymap.set("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>", { desc = "Show diagnostics" })
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", { desc = "Live Grep" })
-keymap.set("n", "<leader>fg", "<cmd> Telescope git_status <CR>", { desc = "Git status" })
 keymap.set("n", "<leader>fc", "<cmd> Telescope commands <CR>", { desc = "Show commands" })
 keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" })
+
+-- FFF
+keymap.set("n", "<leader>ff", function()
+    require("fff").find_files()
+end, { desc = "Find files" })
+keymap.set("n", "<leader>fg", function()
+    require("fff").find_in_git_root()
+end, { desc = "Git status" })
 
 -- Bufferline
 keymap.set("n", "<tab>", "<cmd> BufferLineCycleNext <CR>", { desc = "Next Tab" })

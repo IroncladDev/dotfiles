@@ -34,7 +34,7 @@ return {
                 }
             }
         },
-        fuzzy = { implementation = "prefer_rust_with_warning" },
+        fuzzy = { implementation = "lua" },
         cmdline = {
             keymap = { preset = "super-tab" },
             completion = { menu = { auto_show = true } },

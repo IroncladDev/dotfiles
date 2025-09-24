@@ -1,7 +1,0 @@
--- vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
---     pattern = "*",
---     callback = function()
---         vim.cmd("silent! write")
---     end,
---     group = vim.api.nvim_create_augroup("AutoSaveOnInsertLeave", { clear = true })
--- })

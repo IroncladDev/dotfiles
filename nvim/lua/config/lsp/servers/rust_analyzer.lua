@@ -14,10 +14,9 @@ vim.lsp.config['rust_analyzer'] = {
                 command = "clippy",
             },
             inlayHints = {
-                enable = true,
-                typeHints = true,
-                parameterHints = true,
-                chainingHints = true
+                enable = false,
+                -- typeHints = { enable = true },
+                -- parameterHints = { enable = false }
             },
             diagnostics = {
                 enable = true,
