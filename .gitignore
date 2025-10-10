@@ -25,3 +25,6 @@ nextjs-nodejs/
 .android/
 .semgrep/
 Android Open Source Project/
+fcitx/
+fcitx5/
+environment.d/
