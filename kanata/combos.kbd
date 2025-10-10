@@ -39,8 +39,8 @@
     (e r) [ $combo-time first-release ()
     (u i) ] $combo-time first-release ()
     ;; screenshot/screen capture
-    (r f) S-C-M-4 $combo-time first-release ()
-    (t g) S-M-5 $combo-time first-release ()
+    (r f) prnt $combo-time first-release ()
+    (t g) C-A-prnt $combo-time first-release ()
     ;; numbers
     (bspc a) 1 $combo-time first-release ()
     (bspc s) 2 $combo-time first-release ()

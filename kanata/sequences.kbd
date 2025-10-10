@@ -19,7 +19,7 @@
   s-word (macro A-right)
   s-back-word (macro A-left)
 
-  app-brave (cmd open -a "Brave Browser Nightly")
+  app-brave (cmd omarchy-launch-browser)
   app-kitty (cmd open -a "kitty")
   app-raycast (cmd open -a "Raycast")
   app-slack (cmd open -a "Slack")
