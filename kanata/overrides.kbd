@@ -1,0 +1,10 @@
+(defoverrides
+  (lmet n) (left)
+  (lmet e) (down)
+  (lmet i) (up)
+  (lmet o) (right)
+
+  ;; TODO: modifiers
+
+  (lsft bspc) (lalt bspc)
+)

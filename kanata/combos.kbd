@@ -1,0 +1,55 @@
+;; Combos
+
+;; Note that the key combos map to the QWERTY keys in defsrc, not the actual keys themselves
+(defchordsv2
+    ;; live reload
+    (j n) lrld $combo-time first-release ()
+    ;; esc/tab
+    (a s) esc $combo-time first-release ()
+    (z x) tab $combo-time first-release ()
+    ;; symbols (other)
+    (i o) - $combo-time first-release ()
+    (u o) S-- $combo-time first-release ()
+    (k l) S-' $combo-time first-release ()
+    (j l) ' $combo-time first-release ()
+    (, .) = $combo-time first-release ()
+    (m .) S-= $combo-time first-release ()
+    (p u) S-; $combo-time first-release ()
+    (p j) (macro S-; S-;) $combo-time first-release ()
+    ;; grave/pipe
+    (k ;) grv $combo-time first-release ()
+    (j ;) S-grv $combo-time first-release ()
+    (, /) \ $combo-time first-release ()
+    (m /) S-\ $combo-time first-release ()
+    ;; shift-number symbols
+    (lsft a) S-1 $combo-time first-release ()
+    (lsft s) S-2 $combo-time first-release ()
+    (lsft d) S-3 $combo-time first-release ()
+    (lsft f) S-4 $combo-time first-release ()
+    (lsft g) S-5 $combo-time first-release ()
+    (spc h) S-6 $combo-time first-release ()
+    (spc j) S-7 $combo-time first-release ()
+    (spc k) S-8 $combo-time first-release ()
+    (spc p) S-; $combo-time first-release ()
+    ;; braces
+    (d f) S-[ $combo-time first-release ()
+    (j k) S-] $combo-time first-release ()
+    (c v) S-9 $combo-time first-release ()
+    (m ,) S-0 $combo-time first-release ()
+    (e r) [ $combo-time first-release ()
+    (u i) ] $combo-time first-release ()
+    ;; screenshot/screen capture
+    (r f) S-C-M-4 $combo-time first-release ()
+    (t g) S-M-5 $combo-time first-release ()
+    ;; numbers
+    (bspc a) 1 $combo-time first-release ()
+    (bspc s) 2 $combo-time first-release ()
+    (bspc d) 3 $combo-time first-release ()
+    (bspc f) 4 $combo-time first-release ()
+    (bspc g) 5 $combo-time first-release ()
+    (ret h) 6 $combo-time first-release ()
+    (ret j) 7 $combo-time first-release ()
+    (ret k) 8 $combo-time first-release ()
+    (ret l) 9 $combo-time first-release ()
+    (ret ;) 0 $combo-time first-release ()
+)

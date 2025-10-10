@@ -1,0 +1,6 @@
+(defalias
+  spl (tap-hold 0 $hold-time spc lsft)
+  bsc (tap-hold $tap-time $hold-time bspc lmet)
+  rly (tap-hold $tap-time $hold-time ret lalt)
+  cdr (tap-hold 0 $hold-time sldr lctl)
+)
