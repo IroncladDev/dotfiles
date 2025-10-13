@@ -5,6 +5,7 @@
 
   apps (f f)
   emojis (f e)
+  color-picker (f c)
 
   screenshot-region (s s)
   screenshot-window (s w)
@@ -21,6 +22,7 @@
 
   apps (macro M-spc)
   emojis (macro M-S-spc)
+  color-picker (macro M-prnt)
 
   screenshot-region (macro prnt)
   screenshot-window (macro S-prnt)
