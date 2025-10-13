@@ -17,6 +17,9 @@
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
+    "sort-by-number": true,
+    "all-outputs": false,
+    "disable-scroll": true,
     "format-icons": {
       "default": "",
       "1": "1",
@@ -31,11 +34,8 @@
       "active": "󱓻"
     },
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+      "eDP-1": [4, 5, 6],
+      "DP-2": [1, 2, 3],
     }
   },
   "custom/omarchy": {

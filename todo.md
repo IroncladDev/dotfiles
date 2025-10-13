@@ -1,0 +1,7 @@
+- utilize the super key a bit more
+- trezor
+- noise cancellation
+- vlc
+- yubikey auth
+- make mullvad automatically connect
+- keys are kind of sticky on hypr

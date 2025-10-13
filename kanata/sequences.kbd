@@ -2,27 +2,32 @@
   ;; editing
   s-home (n)
   s-end (o)
-  s-word (w)
-  s-back-word (b)
 
-  ;; focusing apps
-  app-brave (a b)
-  app-kitty (a t)
-  app-raycast (a r)
-  app-slack (a s)
-  app-signal (a C-s)
-  app-mail (a m)
+  apps (f f)
+  emojis (f e)
+
+  screenshot-region (s s)
+  screenshot-window (s w)
+  screenshot-display (s d)
+
+  screen-record-region (r r)
+  screen-record-display (r d)
+  screen-record-region-audio (r a r)
+  screen-record-display-audio (r a d)
 )
 (defvirtualkeys
   s-home (macro home)
   s-end (macro end)
-  s-word (macro A-right)
-  s-back-word (macro A-left)
 
-  app-brave (cmd omarchy-launch-browser)
-  app-kitty (cmd open -a "kitty")
-  app-raycast (cmd open -a "Raycast")
-  app-slack (cmd open -a "Slack")
-  app-signal (cmd open -a "Signal")
-  app-mail (cmd open -a "Mail")
+  apps (macro M-spc)
+  emojis (macro M-S-spc)
+
+  screenshot-region (macro prnt)
+  screenshot-window (macro S-prnt)
+  screenshot-display (macro C-A-prnt)
+
+  screen-record-region (macro A-prnt)
+  screen-record-region-audio (macro A-S-prnt)
+  screen-record-display (macro C-A-prnt)
+  screen-record-display-audio (macro C-A-S-prnt)
 )

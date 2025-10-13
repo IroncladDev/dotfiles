@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=KeyEcho
+Comment=KeyEchostartup script
+Exec=/usr/bin/key-echo 
+StartupNotify=false
+Terminal=false

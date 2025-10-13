@@ -28,3 +28,7 @@ Android Open Source Project/
 fcitx/
 fcitx5/
 environment.d/
+go/
+obs-studio/
+
+**/.DS_Store

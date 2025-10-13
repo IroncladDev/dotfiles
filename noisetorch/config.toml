@@ -1,0 +1,7 @@
+Threshold = 90
+DisplayMonitorSources = false
+EnableUpdates = true
+FilterInput = true
+FilterOutput = false
+LastUsedInput = "alsa_input.usb-Blue_Microphones_Yeti_Nano_2112SH000218_888-000350041006-00.analog-stereo"
+LastUsedOutput = ""
