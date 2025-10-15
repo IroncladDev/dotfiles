@@ -1,11 +1,6 @@
 return {
     'saghen/blink.cmp',
-    -- use a release tag to download pre-built binaries
-    version = '1.*',
-    -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-    -- build = 'cargo build --release',
-    -- If you use nix, you can build from source using latest nightly rust with:
-    -- build = 'nix run .#build-plugin',
+    build = 'cargo build --release',
 
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
@@ -22,7 +17,12 @@ return {
             documentation = {
                 auto_show = true,
                 auto_show_delay_ms = 0
-            }
+            },
+            accept = {
+                auto_brackets = {
+                    enabled = false,
+                },
+            },
         },
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },

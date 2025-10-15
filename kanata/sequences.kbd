@@ -4,6 +4,7 @@
   s-end (o)
 
   apps (f f)
+  prompt (f p)
   emojis (f e)
   color-picker (f c)
 
@@ -21,6 +22,7 @@
   s-end (macro end)
 
   apps (macro M-spc)
+  prompt (macro M-A-spc)
   emojis (macro M-S-spc)
   color-picker (macro M-prnt)
 

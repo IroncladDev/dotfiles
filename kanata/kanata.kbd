@@ -2,6 +2,9 @@
   process-unmapped-keys yes
   danger-enable-cmd yes
   concurrent-tap-hold yes
+  linux-dev-names-include (
+    "beekeeb Piantor Pro"
+  )
 )
 
 (defvar

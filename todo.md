@@ -5,3 +5,7 @@
 - yubikey auth
 - make mullvad automatically connect
 - keys are kind of sticky on hypr
+- rice lazygit
+- wallpapers
+- starship
+- autocomplete in sh

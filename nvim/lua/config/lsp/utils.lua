@@ -7,12 +7,6 @@ local buf = vim.lsp.buf
 local on_attach = function(client, bufnr)
     opts.buffer = bufnr
 
-    vim.defer_fn(function()
-        if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable(true, { bufnr })
-        end
-    end, 100)
-
     -- Essential Keymaps
     opts.desc = "LSP Hover"
     keymap.set("n", "K", buf.hover, opts)
