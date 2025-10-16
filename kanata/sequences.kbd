@@ -28,7 +28,7 @@
 
   screenshot-region (macro prnt)
   screenshot-window (macro S-prnt)
-  screenshot-display (macro C-A-prnt)
+  screenshot-display (macro C-prnt)
 
   screen-record-region (macro A-prnt)
   screen-record-region-audio (macro A-S-prnt)

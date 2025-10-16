@@ -31,5 +31,8 @@ environment.d/
 go/
 obs-studio/
 Pinta/
+astro/
+gtk-3.0/
+gtk-4.0/
 
 **/.DS_Store

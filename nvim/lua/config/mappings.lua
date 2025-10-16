@@ -50,8 +50,6 @@ vim.g.mapleader = " "
 keymap.set("n", "<leader>b", "<cmd> NvimTreeToggle <CR>")
 
 -- Telescope
--- keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>", { desc = "Find files" })
--- kemap.set("n", "<leader>fg", "<cmd> Telescope git_status <CR>", { desc = "Git status" })
 keymap.set("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>", { desc = "Show diagnostics" })
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", { desc = "Live Grep" })
 keymap.set("n", "<leader>fc", "<cmd> Telescope commands <CR>", { desc = "Show commands" })
