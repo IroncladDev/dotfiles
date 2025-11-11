@@ -1,5 +1,5 @@
-*
-!.gitignore
+# Directories
+*/
 !kitty/
 !kanata/
 !hypr/
@@ -9,3 +9,16 @@
 !systemd/
 !fastfetch/
 !walker/
+
+# Unwanted files
+kdenlive-layoutsrc
+kdenliverc
+mimeapps.list
+omarchy.ttf
+QtProject.conf
+todo.md
+xdg-terminals.list
+brave-flags.conf
+chromium-flags.conf
+user-dirs.dirs
+user-dirs.locale
