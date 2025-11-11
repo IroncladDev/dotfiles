@@ -4,7 +4,11 @@
   (lmet i) (up)
   (lmet o) (right)
 
-  ;; TODO: modifiers
-
   (lsft bspc) (lalt bspc)
+
+  (lmet q) (prev)
+  (lmet w) (pp)
+  (lmet f) (next)
+  (lmet p) (vold)
+  (lmet b) (volu)
 )
