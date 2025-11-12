@@ -65,11 +65,6 @@ end, { desc = "Find files" })
 --     require("fff").find_in_git_root()
 -- end, { desc = "Git status" })
 
--- Bufferline
-keymap.set("n", "<tab>", "<cmd> BufferLineCycleNext <CR>", { desc = "Next Tab" })
-keymap.set("n", "<S-tab>", "<cmd> BufferLineCyclePrev <CR>", { desc = "Previous Tab" })
-keymap.set("n", "<leader>ox", "<cmd> BufferLineCloseOthers <CR>", { desc = "Closqe Others" })
-keymap.set("n", "<leader>x", "<cmd> bp|bd # <CR>", { desc = "Close Buffer" })
 keymap.set("n", "<leader>X", "<cmd> bd! <CR>", { desc = "Force Close Buffer" })
 
 -- Navigating in Insert Mode
@@ -113,16 +108,3 @@ keymap.set("n", "<leader>w" .. left, "<C-w>h", { desc = "Move left" })
 keymap.set("n", "<leader>w" .. down, "<C-w>j", { desc = "Move down" })
 keymap.set("n", "<leader>w" .. up, "<C-w>k", { desc = "Move up" })
 keymap.set("n", "<leader>w" .. right, "<C-w>l", { desc = "Move right" })
-
--- Parrot
-keymap.set({ "n", "v" }, "<leader>ai", ":PrtChatToggle<CR>", { desc = "Parrot Toggle AI Chat" })
-keymap.set({ "n", "v" }, "<leader>an", ":PrtChatNew<CR>", { desc = "Parrot New AI Chat" })
-keymap.set({ "n", "v" }, "<leader>af", ":PrtChatFinder<CR>", { desc = "Parrot Find Chat" })
-keymap.set({ "n", "v" }, "<leader>ar", ":PrtChatResponde<CR>", { desc = "Parrot Respond", silent = true })
-keymap.set({ "n", "v" }, "<leader>as", ":PrtChatStop<CR>", { desc = "Parrot Stop Streaming" })
-keymap.set({ "n", "v" }, "<leader>ap", ":PrtProvider<CR>", { desc = "Parrot Select Provider" })
-keymap.set({ "n", "v" }, "<leader>am", ":PrtModel<CR>", { desc = "Parrot Select Model" })
-keymap.set({ "v" }, "<leader>rw", ":PrtRewrite<CR>", { desc = "Rewrite" })
-
--- ToggleTerm
-keymap.set({ "n", "v", "t" }, "<C-f>", "<cmd> ToggleTerm<CR>", { desc = "Toggle Terminal" })
