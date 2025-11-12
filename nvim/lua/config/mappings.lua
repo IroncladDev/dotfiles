@@ -47,7 +47,7 @@ keymap.set({ 'n', 'v' }, 'H', 'O', { noremap = true })
 vim.g.mapleader = " "
 
 -- Nvimtree
-keymap.set("n", "<leader>b", "<cmd> NvimTreeToggle <CR>")
+keymap.set("n", "<leader>b", "<cmd> Oil <CR>")
 
 -- Telescope
 -- keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <CR>", { desc = "Find files" })
