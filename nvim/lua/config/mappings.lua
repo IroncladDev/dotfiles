@@ -54,8 +54,8 @@ keymap.set("n", "<leader>b", "<cmd> Oil <CR>")
 keymap.set("n", "<leader>fg", "<cmd> Telescope git_status <CR>", { desc = "Git status" })
 keymap.set("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>", { desc = "Show diagnostics" })
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>", { desc = "Live Grep" })
-keymap.set("n", "<leader>fc", "<cmd> Telescope commands <CR>", { desc = "Show commands" })
 keymap.set("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" })
+keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Show buffers" })
 
 -- FFF
 keymap.set("n", "<leader>ff", function()
