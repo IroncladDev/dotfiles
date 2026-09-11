@@ -14,8 +14,8 @@ hl.window_rule({
 hl.config({
 	general = {
 		border_size = 2,
-		gaps_in = 8,
-		gaps_out = 32,
+		gaps_in = 2,
+		gaps_out = 0,
 		col = {
 			active_border = "0xffB3C48D",
 			inactive_border = "0xff4D5148",
