@@ -49,6 +49,7 @@
             typescript-language-server
             vscode-langservers-extracted
             lsof
+            iroh-ssh
         ]
         # Linux-only
         ++ lib.optionals pkgs.stdenv.isLinux [
