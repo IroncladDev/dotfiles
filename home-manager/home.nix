@@ -155,6 +155,8 @@
         nix-direnv.enable = true;
     };
 
+    ##### Systemd services #####
+
     systemd.user.services.kanata = lib.mkIf pkgs.stdenv.isLinux {
         Unit.Description = "Kanata keyboard remapper";
         Service = {
@@ -201,6 +203,27 @@
             Unit = "battery-notify.service";
         };
         Install.WantedBy = [ "timers.target" ];
+    };
+
+    ##### Launch Agents (MacOS) #####
+
+    launchd.agents.iroh-ssh = lib.mkIf pkgs.stdenv.isDarwin {
+        enable = true;
+        config = {
+            ProgramArguments = [
+                "${pkgs.iroh-ssh}/bin/iroh-ssh"
+                "server"
+                "--persist"
+                "--relay-url"
+                "https://relay-central.ironclad.sh"
+            ];
+            RunAtLoad = true;
+            KeepAlive = true;
+            ThrottleInterval = 10;
+            WorkingDirectory = config.home.homeDirectory;
+            StandardOutPath = "${config.home.homeDirectory}/Library/Logs/iroh-ssh.log";
+            StandardErrorPath = "${config.home.homeDirectory}/Library/Logs/iroh-ssh.err.log";
+        };
     };
 
     services.hypridle.enable = lib.mkIf pkgs.stdenv.isLinux true;
