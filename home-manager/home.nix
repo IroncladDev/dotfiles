@@ -50,6 +50,7 @@
             vscode-langservers-extracted
             lsof
             iroh-ssh
+            autossh
         ]
         # Linux-only
         ++ lib.optionals pkgs.stdenv.isLinux [
