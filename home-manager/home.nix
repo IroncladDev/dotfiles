@@ -214,8 +214,8 @@
                 "${pkgs.iroh-ssh}/bin/iroh-ssh"
                 "server"
                 "--persist"
-                "--relay-url"
-                "https://relay-central.ironclad.sh"
+#                "--relay-url"
+#                "https://relay-central.ironclad.sh"
             ];
             RunAtLoad = true;
             KeepAlive = true;
