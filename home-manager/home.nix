@@ -131,7 +131,7 @@
                 kill -9 $pids
             '';
             shuttle = ''
-                sshuttle -r wproxy 10.0.0.0/8 --dns
+                sshuttle -r "''$argv[1]" 10.0.0.0/8 --dns
             '';
         };
         plugins = lib.mkIf pkgs.stdenv.isDarwin [
@@ -218,8 +218,8 @@
                 "${pkgs.iroh-ssh}/bin/iroh-ssh"
                 "server"
                 "--persist"
-#                "--relay-url"
-#                "https://relay-central.ironclad.sh"
+                #                "--relay-url"
+                #                "https://relay-central.ironclad.sh"
             ];
             RunAtLoad = true;
             KeepAlive = true;
