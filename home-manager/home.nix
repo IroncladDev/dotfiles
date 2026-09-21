@@ -57,7 +57,6 @@
             wiremix
             impala
             bluetui
-            cloudflared
             signal-desktop
             nodejs_26
             dunst
@@ -72,6 +71,8 @@
             rose-pine-hyprcursor
             awww
             nixfmt
+            kdePackages.kdenlive
+            sshuttle
         ]
         # macOS-only
         ++ lib.optionals pkgs.stdenv.isDarwin [
@@ -128,6 +129,9 @@
                 end
                 echo "Killing process(es) on port $argv[1] → $pids"
                 kill -9 $pids
+            '';
+            shuttle = ''
+                sshuttle -r wproxy 10.0.0.0/8 --dns
             '';
         };
         plugins = lib.mkIf pkgs.stdenv.isDarwin [
