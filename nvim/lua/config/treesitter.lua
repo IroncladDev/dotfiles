@@ -14,12 +14,13 @@ vim.treesitter.language.register("astro", "astro")
 vim.treesitter.language.register("svelte", "svelte")
 vim.treesitter.language.register("lua", "lua")
 vim.treesitter.language.register("go", "go")
+vim.treesitter.language.register("sql", "sql")
 
 -- Build pattern array by concatenating all filetypes
 local pattern = {}
 vim.list_extend(pattern, javascript_fts)
 vim.list_extend(pattern, xml_fts)
-vim.list_extend(pattern, { "lua", "vim", "vimdoc", "css", "rust", "astro", "svelte", "go" })
+vim.list_extend(pattern, { "lua", "vim", "vimdoc", "css", "rust", "astro", "svelte", "go", "sql" })
 
 -- Enable treesitter highlighting and indentation
 vim.api.nvim_create_autocmd("FileType", {
