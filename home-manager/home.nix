@@ -76,8 +76,6 @@
         ]
         # macOS-only
         ++ lib.optionals pkgs.stdenv.isDarwin [
-            docker
-            docker-compose
             mprocs
             glab
             natscli
@@ -85,6 +83,7 @@
             cloudmonkey
             openssh
             postgresql
+            pgcli
         ];
 
     fonts.fontconfig = lib.mkIf pkgs.stdenv.isLinux {

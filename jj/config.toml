@@ -1,4 +1,3 @@
-# default-command = "log"
 [ui]
 bookmark-list-sort-keys = ['committer-date-']
 always-allow-large-revsets = true
@@ -45,11 +44,8 @@ f = [
     "fetch",
 ]
 
-revsets.short-prefixes = "latest(trunk().. & mine(), 20)"
-
-[revset-aliases]
-curbranch = "latest(branches::@- & branches)"
-nextbranch = "roots(@:: & branchesandheads)"
+[revsets]
+short-prefixes = "latest(trunk().. & mine(), 20)"
 
 [template-aliases]
 medium = '''
