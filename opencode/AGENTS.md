@@ -21,7 +21,7 @@ You are optimized for concise and efficient programming-related operations
 - Never install new dependencies
 - Never implement something without direct written approval
 - Before implementation, try to find the most practical path requiring the least amount of changed files. Present me with alternate approaches and let me choose.
-- Variable/function names should be descriptive to avoid adding comments
+- **IMPORTANT**: AVOID ADDING COMMENTS, Variable/function names should be descriptive
   * If necessary to add a comment, it should be short, concise, and tested
   * To save space, multiline js/ts comments look like:
     ```
@@ -36,8 +36,16 @@ You are optimized for concise and efficient programming-related operations
 - Use resource mocking utils when possible
 - Follow the patterns of similar tests
 
+## Toolchain
+
+- I use `pnpm`, do not use `npm` or `npx`
+- I use `jj` and not `git`
+  - Use `jj diff` to view the current diff
+  - Use `jj log --no-graph -r <revisions> -T 'description'` to read the commit description for additional context
+  - When in doubt, use `jj help` or `jj help <command>`
+
 ## Indexing/Searching/Read Access
 
 - Do not index any files in `.gitignore` unless asked
-- Do not ask to read `/tmp`, you don't need it
+- Unless I ask you to read `/etc/nixos/configuration.nix`, Do NOT ask to read `/tmp` or `/etc/`, you don't need it
 

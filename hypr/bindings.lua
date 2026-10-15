@@ -67,13 +67,13 @@ hl.bind("SUPER + SHIFT + PRINT", hl.dsp.exec_cmd("grimblast --notify save screen
 hl.bind(
 	"ALT + PRINT",
 	hl.dsp.exec_cmd(
-		[[bash -lc 'mkdir -p "$HOME/Videos" && geo=$(slurp) && notify-send -a wl-screenrec "Recording" "started" && wl-screenrec -g "$geo" -f "$HOME/Videos/screenrecord-$(date +%Y%m%d-%H%M%S).mp4"']]
+		[[bash -lc 'mkdir -p "$HOME/Videos" && geo=$(slurp) && notify-send -a wl-screenrec "Recording" "started" && wl-screenrec -m 60 -g "$geo" -f "$HOME/Videos/screenrecord-$(date +%Y%m%d-%H%M%S).mp4"']]
 	)
 )
 hl.bind(
 	"ALT + SHIFT + PRINT",
 	hl.dsp.exec_cmd(
-		[[bash -lc 'mkdir -p "$HOME/Videos" && geo=$(slurp) && notify-send -a wl-screenrec "Recording" "started (audio)" && wl-screenrec --audio -g "$geo" -f "$HOME/Videos/screenrecord-$(date +%Y%m%d-%H%M%S).mp4"']]
+		[[bash -lc 'mkdir -p "$HOME/Videos" && geo=$(slurp) && notify-send -a wl-screenrec "Recording" "started (audio)" && wl-screenrec --audio -m 60 -g "$geo" -f "$HOME/Videos/screenrecord-$(date +%Y%m%d-%H%M%S).mp4"']]
 	)
 )
 hl.bind(

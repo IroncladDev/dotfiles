@@ -106,6 +106,9 @@
             set -gx VISUAL nvim
             set --universal nvm_default_version 24
         '';
+        interactiveShellInit = ''
+            bind alt-backspace backward-kill-path-component
+        '';
         functions = {
             sync-dotfiles = ''
                 echo "--> Syncing dotfiles"
