@@ -27,6 +27,9 @@ vim.g.mapleader = " "
 -- Nvimtree
 keymap.set("n", "<leader>b", "<cmd> Oil <CR>")
 
+-- Inline paste
+vim.keymap.set("i", "<C-p>", "<C-r>\"", { noremap = true })
+
 -- Buffers
 keymap.set("n", "<tab>", "<cmd> bn <CR>", { desc = "Next buffer" })
 keymap.set("n", "<S-tab>", "<cmd> bp <CR>", { desc = "Previous buffer" })
