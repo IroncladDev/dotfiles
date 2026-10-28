@@ -41,6 +41,7 @@
             btop
             unzip
             neovim
+            opencode
             luaPackages.tree-sitter-cli
             lua
             stylua
