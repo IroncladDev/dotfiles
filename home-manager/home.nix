@@ -159,10 +159,6 @@
         enable = true;
         nix-direnv.enable = true;
     };
-    programs.opencode = {
-        enable = true;
-        package = (builtins.getFlake "github:mikael-lindstrom/opencode-flake").packages.${pkgs.stdenv.hostPlatform.system}.opencode2;
-    };
 
     ##### Systemd services #####
 
