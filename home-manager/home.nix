@@ -106,6 +106,7 @@
             set -gx EDITOR nvim
             set -gx VISUAL nvim
             set --universal nvm_default_version 24
+            fish_add_path -g $HOME/.local/bin
         '';
         interactiveShellInit = ''
             bind alt-backspace backward-kill-path-component

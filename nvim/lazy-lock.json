@@ -10,14 +10,11 @@
   "indent-blankline.nvim": { "branch": "master", "commit": "f1e186e44d3b7f9ae918008e2c28ce37c6023d2d" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "ninetyfive.nvim": { "branch": "main", "commit": "e66334390f0aa4d3e5c0e71c22de6a3eae259376" },
-  "nvim-highlight-colors": { "branch": "main", "commit": "e4c7af0211866162d999ce0bdd6a029302e19139" },
   "nvim-lint": { "branch": "master", "commit": "52107ce2076a27a285af781248e2c59bad817cd0" },
   "nvim-treesitter": { "branch": "main", "commit": "04f17886f75416dfdc25374c950a52c63f0e98fe" },
   "nvim-ts-autotag": { "branch": "main", "commit": "d7220b55e16ed3c04e88086256def5d282429493" },
   "nvim-web-devicons": { "branch": "master", "commit": "0dc0cfb0c6858041174a53c7aa4adaf65e994b3c" },
-  "oil-git-status.nvim": { "branch": "main", "commit": "a3e2ccb00cb8822115e28a9a1791eda051d940c9" },
   "oil.nvim": { "branch": "master", "commit": "d3733d933833a0e59b813ecec99341527adf0c28" },
   "osmium": { "branch": "master", "commit": "a2a0f1d7ce96ce319706e84d25b2c9b89ee8f2fd" },
-  "supermaven-nvim": { "branch": "main", "commit": "07d20fce48a5629686aefb0a7cd4b25e33947d50" },
   "vim-sleuth": { "branch": "master", "commit": "be69bff86754b1aa5adcbb527d7fcd1635a84080" }
 }

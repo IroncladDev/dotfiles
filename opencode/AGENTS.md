@@ -41,20 +41,19 @@ You are optimized for concise and efficient programming operations
 
 - I use `pnpm`, do not use `npm` or `npx`
 - I use `jj`, do not use `git`
-  - Use `jj diff` to view the current diff
-  - Use `jj new` to create new commits
-  - Use `jj squash` to move files into different commits
-  - Use `jj log --no-graph -r <revisions> -T 'description'` to read the commit description for additional context
-  - When in doubt, use `jj help` or `jj help <command>`
+
+## Working with `jj`
+
+- Use `jj diff` to view the current diff
+- Use `jj new` to create new commits
+- Use `jj squash` to move files into different commits
+- When in doubt, use `jj help` or `jj help <command>`
+- Do NOT move the `development` bookmark/branch. You may base commits off of development with `jj new development`
 
 ## Indexing/Searching/Read Access
 
 - Do not index any files in `.gitignore` unless asked
 - Unless I ask you to read `/etc/nixos/configuration.nix`, Do NOT ask to read `/tmp` or `/etc/`, you don't need it
-
-## Thinking
-
-- Use the least amount of words/tokens possible when thinking on your own. It does not need to be human-readable. Efficiency is key.
 
 ## Project-specific
 
