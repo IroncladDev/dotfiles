@@ -50,6 +50,7 @@
             vscode-langservers-extracted
             lsof
             iroh-ssh
+            claude-code
         ]
         # Linux-only
         ++ lib.optionals pkgs.stdenv.isLinux [

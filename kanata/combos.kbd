@@ -14,11 +14,11 @@
     (j l) ' $combo-time first-release ()
     (, .) = $combo-time first-release ()
     (m .) S-= $combo-time first-release ()
-    (p u) S-; $combo-time first-release ()
+    (p u) S-grv $combo-time first-release ()
     (p j) (macro S-; S-;) $combo-time first-release ()
     ;; grave/pipe
     (k ;) grv $combo-time first-release ()
-    (j ;) S-grv $combo-time first-release ()
+    (j ;) S-; $combo-time first-release ()
     (, /) \ $combo-time first-release ()
     (m /) S-\ $combo-time first-release ()
     ;; shift-number symbols
